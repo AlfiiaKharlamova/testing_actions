@@ -1,11 +1,13 @@
 name: Applying features
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  Apply feast:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Start applying features into Feast"
       - name: Apply
-        run: |
+      - run: |
+          cd in_bug
+      - run: |
           feast apply
       - run: echo "🍏 This job's status is ${{ job.status }}."

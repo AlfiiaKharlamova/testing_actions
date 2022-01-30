@@ -7,5 +7,7 @@ jobs:
       - run: echo "Start applying features into Feast"
       - name: Check out repository code
         uses: actions/checkout@v2
-      - run: /in_bug/applyScript.sh
+      - run: cd ./in_bug
+      - run: chmod +x applyScript.sh
+      - run: ./applyScript.sh
       - run: echo "🍏 This job's status is ${{ job.status }}."

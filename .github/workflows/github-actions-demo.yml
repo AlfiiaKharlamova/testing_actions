@@ -1,7 +1,7 @@
 name: Applying features
 on: [push]
 jobs:
-  Apply feast:
+  Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Start applying features into Feast"

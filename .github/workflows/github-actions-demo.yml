@@ -5,6 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Start applying features into Feast"
-      - run: cd /home/alfia/Testing_feast/testing_actions/in_bug
-      - run: feast apply
+      - name: Doing work
+      - run: |
+          cd /home/alfia/Testing_feast/testing_actions/in_bug
+      - run: |
+          feast apply
       - run: echo "🍏 This job's status is ${{ job.status }}."

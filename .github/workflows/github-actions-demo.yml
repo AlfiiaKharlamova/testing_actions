@@ -6,7 +6,6 @@ jobs:
     steps:
       - run: echo "Start applying features into Feast"
       - name: Apply
-        uses: /home/alfia/Testing_feast/testing_actions/in_bug
-      - run: |
-          feast apply
+      - run: cd /home/alfia/Testing_feast/testing_actions/in_bug
+      - run: feast apply
       - run: echo "🍏 This job's status is ${{ job.status }}."

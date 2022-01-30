@@ -5,8 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Start applying features into Feast"
-      - name: Check out repository code
-        uses: actions/checkout@v2
       - run: cd ./in_bug
       - run: chmod +x applyScript.sh
       - run: ./applyScript.sh

@@ -6,8 +6,7 @@ jobs:
     steps:
       - run: echo "Start applying features into Feast"
       - name: Apply
-      - run: |
-          cd in_bug
+        uses: in_bug
       - run: |
           feast apply
       - run: echo "🍏 This job's status is ${{ job.status }}."

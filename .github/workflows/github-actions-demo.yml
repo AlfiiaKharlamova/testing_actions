@@ -2,9 +2,11 @@ name: Applying features
 on: [push]
 jobs:
   Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - run: echo "Start applying features into Feast"
+      - name: Check out repository code
+        uses: actions/checkout@v2
       - run: cd ./in_bug
       - run: chmod +x applyScript.sh
       - run: ./applyScript.sh

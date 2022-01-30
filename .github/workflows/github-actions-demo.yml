@@ -8,7 +8,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
       - run: feast init testDir
-      - run: csudo p -a ./in_bug/. /testDir/
+      - run: sudo cp -a ./in_bug/. /testDir/
       - run: cd ./in_bug
       - run: feast apply
       - run: echo "🍏 This job's status is ${{ job.status }}."

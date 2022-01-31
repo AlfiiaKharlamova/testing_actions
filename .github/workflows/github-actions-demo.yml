@@ -1,7 +1,7 @@
 name: Applying features
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  Feast-apply:
     runs-on: self-hosted
     steps:
       - run: echo "Start applying features into Feast"

@@ -8,6 +8,5 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
       - run: feast apply
-      - run: CURRENT_TIME=$(date -u +"%Y-%m-%dT%H:%M:%S")
-      - run: feast materialize-incremental $CURRENT_TIME
+      - run: feast materialize-incremental (date -u +"%Y-%m-%dT%H:%M:%S")
       - run: echo "🍏 This job's status is ${{ job.status }}."

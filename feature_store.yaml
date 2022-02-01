@@ -5,7 +5,7 @@ registry: data/registry.db
 provider: local
 offline_store:
     type: feast_postgres.PostgreSQLOfflineStore # MUST be this value
-    host: 172.17.0.2
+    host: 172.17.0.3
     port: 5432              # Optional, default it 5432
     database: postgres
     db_schema: public
@@ -13,5 +13,5 @@ offline_store:
     password: mysecretpassword
 online_store:
   type: redis
-  connection_string: "127.0.0.1:6789"
+  connection_string: "172.17.0.2:6379"
 
